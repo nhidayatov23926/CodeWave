@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3: Programming Art</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts.js"></script> <!-- Link to external JS file -->
+</head>
+<body>
+    <div class="video-container">
+        <video id="bg-video" class="bg-video" autoplay muted loop>
+            <source src="media/bg.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="content-container">
+        <header>
+            <h1>Programming Art with Code</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team-members.html">Our Team</a></li>
+                    <li><a href="hour-of-code.html">Hour of Code</a></li>
+                    <li><a href="web-project.html">Website Project</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Code Art Example</h2>
+                <div id="art-example">
+                    <!-- Canvas will be dynamically drawn using JS -->
+                    <canvas id="art-canvas" width="640" height="480"></canvas>
+                </div>
+            </section>
+        </main>
+        <button id="toggle-mode" class="toggle-button">☼</button>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://www.instagram.com/team65_site1101/">
+                    <img src="media/ig.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@Team65-ADA">
+                    <img src="media/yt.png" alt="YouTube">
+                </a>
+            </div>
+            <p>&copy; 2024 Team Website</p>
+        </footer>
+    </div>
+</body>
+</html>

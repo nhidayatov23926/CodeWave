@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of IT and Engineering</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <h1>School of Information Technologies and Engineering</h1>
+        <button id="nightModeToggle" class="toggle-button" onclick="toggleNightMode()">☼</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="profile-container">
+
+            <!-- Profile Section -->
+            <div class="profile">
+                <img src="media/nabati.png" alt="Profile Picture" class="profile-pic">
+                <h2>Nabati Hidayatov</h2>
+                <p><strong>BS in Information Technology</strong></p>
+                <p>Email: <a href="mailto:nhidayatov23926@ada.edu.az">nhidayatov23926@ada.edu.az</a></p>
+            </div>
+
+            <!-- Details Section -->
+            <div class="details">
+                <div class="column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li>Leader of the team</li>
+                        <li>Skilled in web design and backend programming</li>
+                        <li>Proficient in JavaScript, and Python</li>
+                        <li>Participant in hackathons</li>
+                        <li>Focused on software development practices</li>
+                        <li>Enthusiastic about AI and machine learning</li>
+                        <li>Contributor to team projects</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Baku European Lyceum</li>
+                        <li>ADA University - BS in Information Technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h3>Members</h3>
+            <ul class="faculty-list">
+                <li>
+                    <img src="media/azim.jpg" alt="Azim Kazimli">
+                    <p><a href="Azim.html">Azim Kazimov</a><br><span>BS in Computer Science</span></p>
+                </li>
+                <li>
+                    <img src="media/leyla.png" alt="Leyla Huseynova">
+                    <p><a href="Leyla.html">Leyla Huseynova</a><br><span>BS in Mathematics</span></p>
+                </li>
+                <li>
+                    <img src="media/photo.png" alt="Samir Ismayilov">
+                    <p><a href="Samir.html">Samir Ismayilov</a><br><span>BS in Mathematics</span></p>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>&copy; 2024 School of Information Technologies and Engineering.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleNightMode() {
+            const body = document.body;
+            const toggleButton = document.getElementById('nightModeToggle');
+
+            body.classList.toggle('night-mode');
+
+            if (body.classList.contains('night-mode')) {
+                toggleButton.textContent = "☽"; // Night Mode Icon
+            } else {
+                toggleButton.textContent = "☼"; // Day Mode Icon
+            }
+        }
+
+        // Automatically set night mode based on time
+        window.onload = function () {
+            const currentHour = new Date().getHours();
+            const body = document.body;
+
+            if (currentHour >= 18 || currentHour < 7) {
+                body.classList.add('night-mode');
+                document.getElementById('nightModeToggle').textContent = "☽";
+            } else {
+                body.classList.remove('night-mode');
+                document.getElementById('nightModeToggle').textContent = "☼";
+            }
+        };
+    </script>
+</body>
+</html>

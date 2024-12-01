@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of IT and Engineering</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>School of Information Technologies and Engineering</h1>
+        <button id="nightModeToggle" class="toggle-button" onclick="toggleNightMode()">☼</button>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-container">
+
+            <div class="profile">
+                <img src="media/leyla.png" alt="Profile Picture" class="profile-pic">
+                <h2>Leyla Huseynova</h2>
+                <p><strong>BS in Math</strong></p>
+                <p>Email: <a href="mailto:lhuseynova21095@ada.edu.az">lhuseynova21095@ada.edu.az</a></p>
+            </div>
+
+            <div class="details">
+                <div class="column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li>Interested in programming</li>
+                        <li>Likes creating designs for websites</li>
+                        <li>Shows high interest in solving math problems</li>
+                        <li>Good at explaining math problems</li>
+                        <li>Makes contribution to team projects</li>
+                        <li>Interested in innovative technologies</li>
+                        <li>Participated in math olympiads</li>
+                        <li>Has drawing and writing skills</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>LANDAU School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Members</h3>
+            <ul class="faculty-list">
+                <li>
+                    <img src="media/azim.jpg" alt="Member"> 
+                    <p><a href="Azim.html">Azim Kazimov</a><br><span>BS in Computer Science</span></p>
+                </li>
+                <li>
+                    <img src="media/nabati.png" alt="Member">
+                    <p><a href="Nabati.html">Nabati Hidayatov</a><br><span>BS in Information Technology</span></p>
+                </li>
+                <li>
+                    <img src="media/photo.png" alt="Member">
+                    <p><a href="Samir.html">Samir Ismayilov</a><br><span>BS in Math</span></p>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 School of Information Technologies and Engineering.</p>
+    </footer>
+
+    <script>
+        function toggleNightMode() {
+            const body = document.body;
+            const toggleButton = document.getElementById('nightModeToggle');
+            
+            body.classList.toggle('night-mode');
+            
+            if (body.classList.contains('night-mode')) {
+                toggleButton.textContent = "☽";
+            } else {
+                toggleButton.textContent = "☼";
+            }
+        }
+
+        window.onload = function () {
+            const currentHour = new Date().getHours();
+            if (currentHour >= 7 && currentHour < 18) {
+                document.body.classList.remove('night-mode');
+            } else {
+                document.body.classList.add('night-mode');
+            }
+        };
+    </script>
+
+</body>
+</html>

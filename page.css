@@ -1,0 +1,359 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+.site-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.site-header p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #d1e8ff;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1100px;
+    gap: 20px;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+.profile {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #004080;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.profile h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.profile a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.cta-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Details Section */
+.details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.details .column {
+    background: white;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background: #e9f1ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.faculty-list {
+    list-style: none;
+    padding: 0;
+}
+
+.faculty-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.faculty-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #004080;
+}
+
+.faculty-list p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.faculty-list a {
+    font-weight: bold;
+    color: #004080;
+    text-decoration: none;
+}
+
+.faculty-list a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .faculty-list li {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Night Mode */
+.night-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.night-mode .site-header {
+    background-color: #333;
+    color: #ddd;
+}
+
+.night-mode .profile,
+.night-mode .details .column,
+.night-mode .sidebar {
+    background-color: #1f1f1f;
+    color: #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.night-mode .profile img {
+    border: 3px solid #bb86fc;
+}
+
+.night-mode .faculty-list img {
+    border: 2px solid #bb86fc;
+}
+
+.night-mode .profile a,
+.night-mode .faculty-list a {
+    color: #bb86fc;
+}
+
+/* Toggle Button */
+.toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #004080;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.toggle-button:hover {
+    background-color: #002850;
+    transform: scale(1.1);
+}
+
+.night-mode .toggle-button {
+    background-color: #333;
+    color: #ff6b6b;
+}
+
+.night-mode .toggle-button:hover {
+    background-color: #555;
+}
+/* Night Mode Styles */
+.night-mode {
+    background-color: #121212;
+    color: white; /* Text color is white for dark mode */
+}
+
+.night-mode .site-header {
+    background-color: #333;
+    color: #ddd;
+}
+
+.night-mode .site-footer {
+    background-color: #333;
+    color: #ddd;
+}
+
+.night-mode .profile {
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.night-mode .profile img {
+    border: 3px solid #bb86fc;
+}
+
+.night-mode .profile h2,
+.night-mode .profile p {
+    color: white;
+}
+
+.night-mode .details h3,
+.night-mode .sidebar h3 {
+    color: white;
+}
+
+.night-mode .details li,
+.night-mode .faculty-list p {
+    color: white; 
+}
+
+.night-mode .faculty-list img {
+    border: 2px solid #bb86fc;
+}
+
+.night-mode .profile a,
+.night-mode .faculty-list a {
+    color: #bb86fc;
+}
+
+.night-mode .site-header button {
+    background-color: #444;
+    color: white;
+}
+
+.night-mode .toggle-button {
+    background-color: #333;
+    color: #ff6b6b;
+}
+
+.night-mode .toggle-button:hover {
+    background-color: #555;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004080; 
+    color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    animation: fadeInUp 1.5s ease-in;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of IT and Engineering</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>School of Information Technologies and Engineering</h1>
+        <button id="nightModeToggle" class="toggle-button" onclick="toggleNightMode()">☼</button>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <div class="profile">
+                <img src="media/azim.jpg" alt="Profile Picture" class="profile-pic">
+                <h2>Azim Kazimov</h2>
+                <p><strong>BS in Computer Science</strong></p>
+                <p>Email: <a href="mailto:akazimov23285@ada.edu.az">akazimov23285@ada.edu.az</a></p>
+            </div>
+            
+            <div class="details">
+                <div class="column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li>Member of the team </li>
+                        <li>Beginner in web design and backend programming</li>
+                        <li>Participant of Scientific and practical conference of the Academy of Small Sciences</li>
+                        <li>Concentrated on exploring software development</li>
+                        <li>Passionate about programming and AI technology</li>
+                        <li>Contributor to team projects</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Baku European Lyceum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Members</h3>
+            <ul class="faculty-list">
+                <li>
+                    <img src="media/nabati.png" alt="Member">
+                    <p><a href="Nabati.html">Nabati Hidayatov</a><br><span>BS in Information Technology</span></p>
+                </li>
+                <li>
+                    <img src="media/leyla.png" alt="Member">
+                    <p><a href="Leyla.html">Leyla Huseynova</a><br><span>BS in Math</span></p>
+                </li>
+                <li>
+                    <img src="media/photo.png" alt="Member">
+                    <p><a href="Samir.html">Samir Ismayilov</a><br><span>BS in Math</span></p>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 School of Information Technologies and Engineering.</p>
+    </footer>
+
+    <script>
+        function toggleNightMode() {
+            const body = document.body;
+            const toggleButton = document.getElementById('nightModeToggle');
+            
+            body.classList.toggle('night-mode');
+            
+            if (body.classList.contains('night-mode')) {
+                toggleButton.textContent = "☽";
+            } else {
+                toggleButton.textContent = "☼";
+            }
+        }
+
+        window.onload = function () {
+            const currentHour = new Date().getHours();
+            if (currentHour >= 7 && currentHour < 18) {
+                document.body.classList.remove('night-mode');
+            } else {
+                document.body.classList.add('night-mode');
+            }
+        };
+    </script>
+
+</body>
+</html>
